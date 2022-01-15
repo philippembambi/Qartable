@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        window.location.replace("");
+        var client = {
+            noms: 'Philippe',
+            sexe: 'M'
+        }
+        localStorage.setItem('client', client.noms);
+        
+        if(document.getElementById("option1").checked == true)
+            {
+            option = document.getElementById("option1").value;
+            }
+            else if(document.getElementById("option2").checked == true)
+            {
+            option = document.getElementById("option2").value;
+            }
+            else if(document.getElementById("option3").checked == true)
+            {
+            option = document.getElementById("option3").value;
+            }
+            else if(document.getElementById("option4").checked == true)
+            {
+            option = document.getElementById("option4").value;
+            }
+            else {
+                option = "Non définie";
+            }
+        if(document.getElementById("noms_eleve").value != "")
+        {
+        var eleve = {
+            noms: document.getElementById("noms_eleve").value,
+            sexe: document.getElementById("sexe").value,
+            date_naissance: document.getElementById("date_naissance").value,
+            lieu_naissance: document.getElementById("lieu").value,
+            classe: document.getElementById("classe").value,
+            option: option,
+            infos_sup: document.getElementById("infos").value,
+            photo: document.getElementById("fichier").innerHTML,
+            noms_tuteur: document.getElementById("t_noms").value,
+            nationalite_tuteur: document.getElementById("t_nationalite").value,
+            profession_tuteur: document.getElementById("t_profession").value,
+            adresse_tuteur: document.getElementById("t_adresse").value,
+            tel_tuteur: document.getElementById("t_tel").value
+        }
+        }
+        </script>
+       <style>
+           h1{
+               text-decoration: none;
+               color: #333333;
+  background-color: #e2dede9a;
+  border-color: #ddd;
+           }
+       </style>
+       <a href="http://" target="_blank" rel="noopener noreferrer"></a> 
+       <input type="checkbox" name="" id=""  style="background-color: rgb(147, 206, 147);">
+       <input type="date" name="" id="">
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Géolocalisation</title>
+</head>
+<body>
+    <p id="demo">Click sur le bouton pour voir vos coordnonnées</p>
+    <button onclick="get_MarkerLocation()">Montre moi</button>
+    <br>
+    <div id="mapholder"></div>
+
+    <script>
+        var x = document.getElementById("demo");
+        function getLocation()
+        {
+            if(navigator.geolocation)
+            {
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
+            }
+            else{
+                x.innerHTML = "Le système de géolocalisation n'est pas prise en charge par ce navigateur";
+            }
+            function showPosition(position)
+            {
+                var latlon = position.coords.latitude + ", " + position.coords.longitude;
+                var img_url = "http://maps.googleapis.com/maps/api/staticmap?center="+ latlon + "&zoom=14&size=400x300&sensor=false";
+                document.getElementById("mapholder").innerHTML = "<img src='" + img_url + "'>";
+            }
+            function showError(error)
+            {
+                switch(error.code)
+                {
+                    case error.PERMISSION_DENIED:
+                        x.innerHTML = "L'utilisateur n'a pas autorisé la localisation.";
+                        break;
+                    case error.POSITION_UNAVAILABLE:
+                        x.innerHTML = "Les informations sur la géolocalisation ne sont pas disponible.";
+                        break;
+                    case error.TIMEOUT:
+                        w.innerHTML = "Le temps d'attente de réponse est dépassé.";
+                        break;
+                    case error.UNKWON_ERROR:
+                        x.innerHTML = "Une erreur inconnnu s'est produite.";
+                }
+            }
+        }
+
+        function get_MarkerLocation()
+        {
+            //Vérifier le support de géolocalisation
+            if(navigator.geolocation)
+            {
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
+            }
+            else{
+                x.innerHTML = "Le système de géolocalisation n'est pas prise en charge par ce navigateur";
+            }
+            //Determiner la position de l'utilisateur
+            function showPosition(position)
+            {
+                lat = position.coords.latitude;
+                lon = position.coords.longitude;
+                latlon = new google.maps.LatLng(lat,lon);
+                mapholder = document.getElementById("mapholder");
+                mapholder.style.width = '500px';
+                var myoptions = {
+                    center: latlon,
+                    zoom: 14,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP,
+                    mapTypeControl: false,
+                    navigationControlOptions: {
+                        style: google.maps.navigationControlStyle.SMALL
+                    }
+                };
+                var map = new google.maps.Map(document.getElementById("mapholder"), myoptions);
+                var marker = new google.maps.Marker({
+                    position: latlon,
+                    map: map,
+                    title: "Vous êtes ici !"
+                })
+            }
+
+            function showError(error)
+            {
+                switch(error.code)
+                {
+                    case error.PERMISSION_DENIED:
+                        x.innerHTML = "L'utilisateur n'a pas autorisé la localisation.";
+                        break;
+                    case error.POSITION_UNAVAILABLE:
+                        x.innerHTML = "Les informations sur la géolocalisation ne sont pas disponible.";
+                        break;
+                    case error.TIMEOUT:
+                        w.innerHTML = "Le temps d'attente de réponse est dépassé.";
+                        break;
+                    case error.UNKWON_ERROR:
+                        x.innerHTML = "Une erreur inconnnu s'est produite.";
+                }
+            }
+        }
+    </script>
+<!--Cette importation n'est indispensable que pour la fonction get_MarkerLocation()-->
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+</body>
+</html>

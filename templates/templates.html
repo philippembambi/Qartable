@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue templates</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./font-awesome.css">
+    <link rel="stylesheet" href="./font-awesome.min.css">
+    <script src="./vue.js"></script>
+</head>
+<script></script>
+<style>
+  body {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #eee;
+  }
+  
+  .form-signin {
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+  }
+  .form-signin .form-signin-heading,
+  .form-signin .checkbox {
+    margin-bottom: 10px;
+  }
+  .form-signin .checkbox {
+    font-weight: normal;
+  }
+  .form-signin .form-control {
+    position: relative;
+    height: auto;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+  }
+  .form-signin .form-control:focus {
+    z-index: 2;
+  }
+  .form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  
+  .input-select {
+    padding: 0px 15px;
+    background: #FFF;
+    border: 1px solid #E4E7ED;
+    height: 40px;
+  }
+  .block_main {color:white;}
+.infobulle_options {margin:0px 0px 0px 2px;}
+.infobulle_options a.info{position:relative;bottom:2px;z-index:24;margin:0px 0px 0px 0px;padding:2px 5px 0px 5px;text-align:center;color:#CFCFCF;font-size:11px;font-weight:bold;background-color:#3276b1;text-decoration:none;-moz-border-radius:2px;-khtml-border-radius:2px;-webkit-border-radius:2px;border-radius:2px;}
+.infobulle_options a.info:hover{z-index:25;background-color:#3276b1;color:#895902;padding:2px 5px 5px 5px;}
+.infobulle_options a.info span{display:none;}
+.infobulle_options a.info:hover span{display:block;position:absolute;top:18px;left:-150px;width:300px;text-align:left;padding:20px 20px 10px 20px;;background-color:#3276b1;color:#333333;font-size:11px;font-weight:normal;-moz-border-radius:3px;-khtml-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;}
+.infobulle_options a.info span i{color:#333333;}
+.infobulle_options a.info span ul{margin:5px 0px 5px 30px;padding:0px 0px 0px 0px;}
+.infobulle_options a.info span li{margin:0px 0px 0px 0px;padding:0px 0px 0px 0px;font-weight:normal;}
+.infobulle_options a.info span p{margin:10px 0px 0px 0px;padding:0px 0px 0px 0px;color:#6F6F6F;}
+.infobulle_options a.info span div{width:200px;text-transform:uppercase;margin:10px auto 0px auto;text-align:center;padding:1px 0px 1px 0px;background-color:black;color:white;font-weight:bold;-moz-border-radius:3px;-khtml-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;}
+
+</style>
+<body>
+    <div class="container" style="margin-top: 10px;">
+        <nav class="navbar navbar-inverse">
+                <div class="container">
+                  <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"><i class="fa fa-compress"></i> Projets</a>
+                  </div>
+                  <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                      <li class="active"><a href="#" v-on:click="selectedCmp = 'app-serveur'"><i class="fa fa-male"></i> Statut Serveur </a></li>
+                      <li><a href="#" v-on:click="selectedCmp = 'app-adminstration'">Bank Manager</a></li>
+                      <li><a href="#">Shoppings</a></li>
+                    </ul>
+                  </div><!--/.nav-collapse -->
+                </div>
+              </nav>
+        
+    <div id="cmp-application">
+    <app-admin>
+    </app-admin>
+
+    <app-my-server></app-my-server>
+    
+</div>
+</div>
+
+
+<script type="text/x-template" id="template-admin">
+   
+
+
+    <div class="col-sm-4">
+
+      <div class="panel panel-primary">
+          <div class="panel-heading">
+            
+            <h3 class="panel-title">
+
+              <span class="block" style="">
+                <span class="infobulle_options"><a class="info" href="#" style="margin-left: 5%;">
+                  <strong><i class="fa fa-user fa-2x"></i> &nbsp;Admin</strong><span>
+                    <i style="color: white;">Par : </i><b style="color: yellow;">Monseigneur Philippe Mbambi</b><br /><br />
+                    <i style="color: white;">Nom de l'H&ocirc;te : </i><b style="color: yellow;">127.0.0.1</b><i>*</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i style="color: white;">Port : </i><b style="color: yellow;">80</b><i>**</i>
+                    <p  style="color: black;font-size: 12px;color: lightskyblue;">
+                      Using components in Vue.js </p>
+                      <p style="color: black;font-size: 12px;color: white;">
+                       Voici une demo simple de l'utilisation de Vue.j comme bibliothèque
+                        <br> 
+                        <p style="color: black;font-size: 12px;color: white;">
+                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus repudiandae reprehenderit cumque molestias rem, magnam eum alias provident corrupti ut minima eos earum dolore sequi fugit saepe aperiam nam esse! </p>         
+                    <div>Afficher ou modifier les param&egrave;tres</div>
+                </span></a></span>         
+                <span class="text-primary"></span> 
+            </span>
+
+              <strong style="float: right;">Composant Parent</strong></h3>
+          </div>
+          <div class="panel-body">
+
+    <label for="inputEmail">Connectez-vous avec votre Adresse Email</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus v-on:input="submitAdmin">
+        <button class="btn btn-primary"><i class="fa fa-search"></i></button>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me" v-on:click="keepConnecting"> Se souvenir de moi
+          </label>
+        </div>
+     <!--   <button v-on:click="printdata" class="btn btn-lg btn-primary btn-block">Se connecter</button>-->
+<hr>
+     <strong> * {{ infoAfter }}</strong>
+
+  <h4><span style="color: red;">{{ TotalClient }}</span> enregistrés</h4>
+ 
+</div>
+<!--Appel au nouveau composant app-customer-->
+<app-customer 
+             v-bind:TurnConnection="connected" 
+             v-on:clientadded="TotalClient = $event"
+             v-on:clientremoved="TotalClient = $event">
+</app-customer>
+   
+</script>
+
+<!--Template client-->
+<script type="text/x-template" id="template-customer">
+  <div>
+          <div class="panel panel-success">
+                      <!-- Side Modal Bottom Right Danger-->
+              <div class="modal fade right" id="sideModalBRDangerDemo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                aria-hidden="true" data-backdrop="false">
+                <div class="modal-dialog modal-side modal-bottom-right modal-notify modal-danger" role="document">
+                  <!--Content-->
+                  <div class="modal-content">
+                    <!--Body-->
+                    <div class="modal-body">
+
+                        <div style="text-align: center;">
+                          <p style="font-size: 16px;">Vous venez de supprimer un client.</p>
+                        </div>
+                    </div>
+
+                    <!--Footer-->
+                    <div class="modal-footer justify-content-center">
+                      <a role="button" class="btn btn-danger" data-dismiss="modal">OK
+                        <i class="far fa-gem ml-1"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <!--/.Content-->
+                </div>
+              </div>
+              <!-- Side Modal Bottom Right Danger-->
+
+
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              <strong><i class="fa fa-male" style="font-size: 25px;"></i> &nbsp; Client</strong> 
+              <span style="float: right;color:red;">{{ TurnConnection }}</span>
+            </h3>
+          </div>
+ <!--Voici la condition permettant d'afficher ou de cacher le contenu app-customer-->         
+<div class="panel-body" v-if="TurnConnection == 'ON'">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>id</th>
+                <th>Noms</th>
+                <th>Solde</th>
+                <th>Supprimer</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="(client, index) in clients">
+                <td>{{ index+1 }}</td>
+                <td>{{ client }}</td>
+                <td v-for="solde in soldes">{{ solde }}</td>
+                <td><button class="btn btn-success" @click="deleteClient(index)" data-toggle="modal" data-target="#sideModalBRDangerDemo"><img src="./img/Trash_Can_100px.png" style="height: 20px;"></button></td>
+              </tr>
+            </tbody>
+          </table>
+
+<app-form v-on:ClientAjoute="customerNom($event)" v-on:SoldeAjoute="customerSolde($event)"></app-form>
+       
+        </div>
+
+</div></div></div>
+
+</script>
+
+
+
+<script type="text/x-template" id="template-form">
+  <div style="margin-left: 2%;margin-right: 2%;">
+    <form>
+            <label for="user">Noms complets</label>
+    <input type="text" id="user" class="form-control" v-model="client" required>
+            
+            <label for="sold">Solde</label>
+    <input type="text" id="sold" class="form-control" v-model="soldes" placeholder="" required autofocus>
+    <label for="sold">Devise</label><br>
+    <select name="devise" id="devise" class="input-select" style="width:100%;" required autofocus>
+    <option value="$">$</option>
+    <option value="£">£</option>
+    <option value="FC">FC</option>
+    </select>
+            <br><br>
+    <button class="btn btn-lg btn-success btn-block" type="submit" v-on:click.prevent="AddClient">Ajouter</button>
+     </form>   
+     </div>  
+    
+</script>
+
+
+
+
+<script type="text/x-template" id="template-my-server">
+  <div class="col-sm-4">
+    <div class="panel panel-warning">
+      <div class="panel-heading">
+        <h3 class="panel-title"><strong><i class="fa fa-signal fa-2x"></i> Serveurs disponibles</strong></h3>
+      </div>
+      <div class="panel-body">
+        * Etat du serveur : <strong> {{ state }} </strong>
+<hr>
+<button @click="changeState"  class="btn btn-warning"> <i class="fa fa-compress"></i> Changer d'état</button>
+      </div>
+<app-statut-serveur 
+                v-bind:EtatProps="state" 
+                v-on:valeurInitialiser="state = $event"
+                :callbackFn="ResetValue"
+>
+</app-statut-serveur>
+
+<app-cmp-serveur 
+                v-bind:CallbackEtat="state"
+                v-on:InitState="state = $event"
+>
+</app-cmp-serveur>
+
+    </div></div>
+</script>
+
+
+
+<script type="text/x-template" id="template-status-server">
+  <div class="panel panel-success">
+    <div class="panel-heading">
+      <h3 class="panel-title"><strong><i class=" fa fa-desktop fa-2x"></i>&nbsp; Etat Stable</strong></h3>
+    </div>
+<div class="panel-body">         
+<p>* Etat du serveur  était : <strong> {{ etat }} </strong></p>
+<p>* Etat du serveur  devient : <strong> {{ EtatProps }} </strong> </p>
+<hr>
+<p style="display: block;">
+<button @click="ChangerEtat" class="btn btn-success"><i class="fa fa-compress"></i> Changer</button>
+<button @click="ResetValue" class="btn btn-success"><i class=" fa fa-spinner"></i> Initialiser</button>
+<button @click="callbackFn" class="btn btn-success"><i class=" fa fa-reply"></i> Call Back</button>
+</p>
+</div>
+</div>
+
+</script>
+
+
+<script type="text/x-template" id="template-cmp-sever">
+  <div class="panel panel-primary">
+
+    <div class="panel-body">
+
+* L'état du serveur est : <strong> {{ CallbackEtat }} </strong>
+<div class="block">
+<button @click="initState" class="btn btn-primary"><i class="fa fa-spinner"></i> Initialiser</button>
+</div>
+  </div> </div>
+
+</script>
+
+<script src="./managerJs/bootstrap.js"></script>
+<script src="./templates.js"></script>
+</body>
+</html>

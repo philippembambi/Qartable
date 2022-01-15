@@ -1,0 +1,36 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<title>Organigramme de l'école</title>
+<meta name="description" content="">
+<link href="./css/template.css" rel="stylesheet" media="all">
+<script src="./js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="./js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="js/bootstrap.js" type="text/javascript"></script><script src="js/template.js" type="text/javascript"></script><script src="js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="img/favicon.ico">
+<link rel="apple-touch-icon" href="./img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="./img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="./img/apple-touch-icon-114x114.png">
+</head>
+<body>
+
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row"><div class="span12"><div class="well wrapper"><div id="viewer" class="viewer"></div></div></div></div>
+<script src="./js/jquery.iviewer.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+            $(window).resize(function(){
+                $("#viewer").height($(window).height() - 260);
+            });
+
+            $(document).ready(function() {
+                $("#viewer").iviewer({src: "classes.svg", zoom_animation: false});
+                $('#viewer img').bind('dragstart', function(event){
+                    event.preventDefault();
+                });
+            });
+        </script><div class="row">
+            </div>
+</body>
+</html>

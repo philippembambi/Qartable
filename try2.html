@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobbies</title>
+   <link rel="stylesheet" href="./jquery.mobile-1.4.5/jquery.mobile-1.4.5.css">
+    
+<link rel="stylesheet" href="./css/bootstrap.css">
+    
+<!--Js Jquery mobile-->
+<script src="./jquery-2.1.1.min.js"></script>
+<script src="./jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body onload="widden()">
+<input type="checkbox" name="" id="" onselect="">
+    <select name="slider2" id="OnOff" data-role="slider" style="background-image: url();background-size: contain;">
+        <option value="off">OffLine</option>
+        <option value="on" id="on">OnLine</option>  
+      </select>
+<div>
+    <ul>
+        <li>Client : <span id="browser"></span></li>
+        <li>Statut des Cookies : <span id="cookies"></span></li>
+        <li>Connexion : <span id="connect"></span></li>
+    </ul>
+</div>
+<textarea cols="580" rows="160" name="contenu" id="contenu" class="form-control"></textarea>
+
+    <script>
+function widden()
+{
+document.getElementById("contenu").style.height = "500px";
+ }
+
+document.getElementById("browser").innerText = navigator.userAgent;
+if(navigator.cookieEnabled == true)
+{
+    document.getElementById("cookies").innerText = "activé";
+}
+if(navigator.onLine == true)
+{
+    document.getElementById("connect").innerText = "activé";
+}
+    setTimeout(function(){
+        if(navigator.onLine == true)
+        {
+         document.getElementById("OnOff").value = "on";
+         
+        }
+    else
+        {
+            document.getElementById("OnOff").value = "off";
+        }
+    }, 500);
+       
+   
+    </script>
+    <select name="" id="">
+        <option value="" selected></option>
+    </select>
+<a href="" style="box-shadow: 2px 2px 2px rgb(51, 136, 204);"></a>
+href="#" data-toggle="modal" data-target="#modalLoginAvatarDemo" data-icon="star"
+  <a href="" style="background-image: url(./);background-size: contain;"></a>  
+<input type="date" name="" id="" pattern="dd/mm/yyyy">
+
+
+<ul data-role="listview" data-inset="true">
+    <li data-role="list-divider" data-theme="b">
+        <h2 style="color: rgb(248, 78, 78);">
+<span style="font-size: 17px">Envoyé à <?php echo $data2['noms_admin']; ?></span>
+</h2>
+    </li>
+
+    [g]Texte en gras [/g], [s]Je souligne ceci [/s], [couleur]Un peu de couleur[/couleur], [url=www.google.com]En voilà un lien[/url], [i]En fin en italique[/i]
+    <li>
+    <h1><?php echo $data['titre_msg']; ?></h1>
+        <ul>
+            <li>Date : <?php echo $data['date_msg']; ?></li>
+            <li>
+            <li class="ui-body ui-body-a" style="border-color: black;">
+            <fieldset class="ui-grid-a">
+            <div class="ui-block-a" style="font-size: 17px;">
+                <?php echo $data['contenu_msg'];?>  
+</div>    
+            </fieldset>
+            <div class="ui-block-b" style="float: right;margin-right: 2%;background-image: url('./img/bor_katr.jpg');"> 
+            <strong>Satut: 
+                <?php echo ($data['lu'] == "")?' ':'<b style="color: green;"> <i class="fa fa-eye"></i> message lu</b>'; ?> </strong> 
+                <button type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-btn-icon-left ui-icon-minus" style="width: 150px;">Supprimer</button></div>
+           
+        </li>
+        </li>
+        </ul>
+    </li>
+
+</ul>
+</body>
+</html>

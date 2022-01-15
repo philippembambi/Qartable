@@ -1,0 +1,275 @@
+@import "importe/reset.scss";
+@import "importe/police.scss";
+@import "importe/variable.scss";
+@import "importe/animation.scss";
+body{
+    font-family: "Poppins__Medium";
+    font-size: 1em;
+    color: #000;
+}
+.container{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+    .bloquer{
+        position: relative;
+        top: 50%;
+    }
+}
+.bloquer{
+    .section{
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 550px;
+        width: calc(100% - 15%);
+        //background: $red;
+        margin-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+}
+.section{
+    .container__element{
+        height: 215px;
+        width: 330px;
+        background: $blanc;
+        border-radius: 3px;
+        box-shadow: var(--shadow);
+        margin: 0px 10px;
+    }
+}
+.container__element{
+    .bloque__a{
+        height: calc(100% - 30%);
+        width: 100%;
+        //background: #275390;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        cursor: pointer;
+    }
+}
+/*****************Dynamique background***********************/
+
+$back: back1 #271d1d, back2 #8f4f13, back3 #1c425c
+      ,back4 #83640e, back5 #4b0940, back6 #201d0e;
+    
+      @each $verifier in $back{
+          .#{nth($verifier, 1)}{
+                background: nth($verifier, 2 );
+          }
+      }
+/***************************LOADER1**************************/
+/***************************LOADER1**************************/
+.loader_1{
+    height: 50px;
+    width: 6px;
+    background: $blanc;
+    margin: 0px 1px;
+    border-radius: 3px;
+
+    animation: loader1 1s linear infinite;
+
+    @for $loader_1 from 1 through 8{
+        &:nth-child(#{$loader_1}){
+            animation-delay: 0.05s * ($loader_1);
+        }
+    }
+}
+/***************************LOADER2**************************/
+/***************************LOADER2**************************/
+.loader2{
+    height: 70px;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    .loader__card{
+        position: absolute;
+        height: 45px;
+        width: 45px;
+        background: $blanc;
+        border-radius: 3px;
+        box-shadow: var(--shadow);
+        animation: loaderCard .5s cubic-bezier(0.7, 0, 0.3, 1) infinite;
+    }
+
+    .loader__marche{
+        position: relative;
+        top: 33px;
+        left: 20px;
+        height: 6px;
+        width: 6px;
+        background: $blanc;
+        animation: marche .5s cubic-bezier(0.7, 0, 0.3, 1) infinite;
+
+        &::before, &::after{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -38px;
+            height: 6px;
+            width: 6px;
+            background: $blanc;
+        }
+
+        &::after{
+            left: 38px;
+        }
+    }
+}
+/***************************LOADER3**************************/
+/***************************LOADER3**************************/
+.loader3{
+    height: 70px;
+    width: 40px;
+    //background: rgb(190, 50, 50);
+    border-radius: 3px;
+    position: absolute;
+    animation: loader3 2s ease-out infinite;
+
+    @for $loader3 from 1 through 8{
+        &:nth-child(#{$loader3}){
+            animation-delay: 0.05s * ($loader3);
+        }
+    }
+}
+.loader3{
+   
+    &:nth-child(1){
+        background: #f0cc2c;
+        z-index: 6;
+    }
+    &:nth-child(2){
+        background: #db68b5;
+        z-index: 5;
+    }
+    &:nth-child(3){
+        background: #fa6f2e;
+        z-index: 4;
+    }
+    &:nth-child(4){
+        background: #c04848;
+        z-index: 3;
+    }
+    &:nth-child(5){
+        background: #a34242;
+        z-index: 2;
+    }
+    &:nth-child(6){
+        background: #815946;
+        z-index: 1;
+    }
+}
+/***************************LOADER4**************************/
+/***************************LOADER4**************************/
+.loader__4{
+    height: 70px;
+    width: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    flex-direction: column-reverse;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+
+    .loade4{
+       height: 22px;
+       width: 21px;
+       background: $blanc;
+       margin-top: 1px;
+       transform: scale(1);
+       animation: loader4 1s linear 0s infinite;
+       
+       @for $loader4 from 1 through 9{
+           &:nth-child(#{$loader4}){
+               animation-delay: 0.07s * ($loader4);
+           }
+       }
+    }
+}
+/***************************LOADER5**************************/
+/***************************LOADER5**************************/
+.loader__5{
+    height: 90px;
+    width: 90px;
+    //border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: loader5 3s linear 0s infinite;
+
+    .loader5{
+        height: 20px;
+        width: 20px;
+        background: #FFF;
+        margin: 0px 2px;
+        border-radius: 50%;
+        transform: scale(0);
+        display: inline-block;
+        animation: loader5-a 2s linear 0s infinite;
+
+        &:nth-child(1){
+            animation-delay: .7s;
+        }
+    }
+}
+/***************************LOADER6**************************/
+/***************************LOADER6**************************/
+.loader__6{
+    height: 100px;
+    width: 100px;
+    //border: 1px solid red;
+    position: absolute;
+    
+    .loader6{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 5px solid;
+        border-top-color: #7171ff;
+        border-left-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-radius: 50%;
+        animation: essaie 2s cubic-bezier(0.680, -0.550,0.265,1.550) infinite;
+
+    }
+    .small, .small_1{
+        height: 60px;
+        width: 60px;
+    }
+    .large, .large_1{
+        height: 40px;
+        width: 40px;
+    }
+    .medieme, .medieme_1{
+        height: 20px;
+        width: 20px;
+    }
+
+    .small_1{
+        border-top-color: rgba(184, 183, 183, 0.986);
+        animation-delay: .08s;
+    }
+    .large_1{
+        border-top-color:  rgba(184, 183, 183, 0.986);
+        animation-delay: .10s;
+    }
+    .medieme_1{
+        border-top-color:  rgba(184, 183, 183, 0.986);
+        animation-delay: .14s;
+    }
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+<!--Css Jquey mobile-->
+    <link rel="stylesheet" href="./jquery.mobile-1.4.5/jquery.mobile-1.4.5.css">
+    <link rel="stylesheet" href="./assets/css/jqm-demos.css">
+    <link rel="stylesheet" href="./css/font-awesome.css">
+      <link type="text/css" rel="stylesheet" href="./css/style.css"/>
+      <link href="./managerCss/bootstrap.min.css" rel="stylesheet">
+  
+<!--Js Jquery mobile-->
+    <script src="./jquery-2.1.1.min.js"></script>
+    <script src="./jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+</head>
+
+<body onload="checkConnection()">
+
+    <div data-role="page" class="jqm-demos ui-responsive-panel" id="page1" data-title="eleve" data-url="list_eleves" data-theme="a">
+       <div data-role="header" data-theme="a">
+                <a href="./" data-shadow="false" data-iconshadow="false" data-icon="carat-l" data-iconpos="notext" data-rel="back" data-ajax="false">Back</a>
+                <h2>Web storage</h2>
+            </div><!-- /header -->
+            <div data-role="main" class="ui-content jqm-content jqm-fullwidth"> <!--Debut de main-->
+
+                <div data-role="collapsible" data-inset="false">
+                    <h4>Cookie Administrateur</h4>
+                    <p id="admin"></p>
+                </div>
+
+                <div data-role="collapsible" data-inset="false">
+                    <h4>Cookie Elève</h4>
+                    <p>Ce cookie est actuellement vide
+                        .</p>
+                </div>
+</div>
+</div>
+<a href="http://" target="_blank" rel="noopener noreferrer" id="lien"></a>
+<form action="" method="get" id="formulaire" style="background-color: rgb(224, 218, 218);">
+
+</form>
+<script>
+    var lien = document.getElementById('lien');
+    lien.addEventListener('click', function(){
+docume.getElementById("lien").submit();
+    });
+
+   function checkConnection()
+    {
+        if(navigator.onLine == true)
+{
+    alert('vous êtes connectés !');
+}
+else
+{
+    alert('Pas de connection');
+}
+    }
+  //  var admin = localStorage.getItem("adminPsw");
+    //alert(admin);
+//document.getElementById("admin").innerHTML = "adminPsw : " + admin;
+</script>
+<script>
+</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+body {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #eee;
+  }
+  
+  .form-signin {
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+  }
+  .form-signin .form-signin-heading,
+  .form-signin .checkbox {
+    margin-bottom: 10px;
+  }
+  .form-signin .checkbox {
+    font-weight: normal;
+  }
+  .form-signin .form-control {
+    position: relative;
+    height: auto;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+  }
+  .form-signin .form-control:focus {
+    z-index: 2;
+  }
+  .form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  
+  .input-select {
+    padding: 0px 15px;
+    background: #FFF;
+    border: 1px solid #E4E7ED;
+    height: 40px;
+  }
+  .block_main {color:white;}
+.infobulle_options {margin:0px 0px 0px 2px;}
+.infobulle_options a.info{position:relative;bottom:2px;z-index:24;margin:0px 0px 0px 0px;padding:2px 5px 0px 5px;text-align:center;color:#CFCFCF;font-size:11px;font-weight:bold;background-color:#3276b1;text-decoration:none;-moz-border-radius:2px;-khtml-border-radius:2px;-webkit-border-radius:2px;border-radius:2px;}
+.infobulle_options a.info:hover{z-index:25;background-color:#3276b1;color:#895902;padding:2px 5px 5px 5px;}
+.infobulle_options a.info span{display:none;}
+.infobulle_options a.info:hover span{display:block;position:absolute;top:18px;left:-150px;width:300px;text-align:left;padding:20px 20px 10px 20px;;background-color:#3276b1;color:#333333;font-size:11px;font-weight:normal;-moz-border-radius:3px;-khtml-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;}
+.infobulle_options a.info span i{color:#333333;}
+.infobulle_options a.info span ul{margin:5px 0px 5px 30px;padding:0px 0px 0px 0px;}
+.infobulle_options a.info span li{margin:0px 0px 0px 0px;padding:0px 0px 0px 0px;font-weight:normal;}
+.infobulle_options a.info span p{margin:10px 0px 0px 0px;padding:0px 0px 0px 0px;color:#6F6F6F;}
+.infobulle_options a.info span div{width:200px;text-transform:uppercase;margin:10px auto 0px auto;text-align:center;padding:1px 0px 1px 0px;background-color:black;color:white;font-weight:bold;-moz-border-radius:3px;-khtml-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;}

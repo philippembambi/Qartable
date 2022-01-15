@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+    <script src="./dependances/react.js"></script>
+    <script src="./dependances/react-dom.js"></script>
+</head>
+<body>
+    <div id="root">
+    </div>
+
+    <div id="formulaire">
+        <form action="" method="get">
+            <label for="nom">Nom : </label>
+            <input type="text" name="nom" id="nom"/>
+ 
+            <label for="tel">Tél :</label>
+            <input type="number" name="tel" id="tel">
+        </form>
+        <br>
+        <button id="btn_submit">Valider</button>
+        <button id="hide_cmp">Cacher</button>
+    
+    </div>
+    
+<script>
+    //Créer un composant
+        var helloComponent = React.createClass({
+        render: function() {
+            return React.DOM.h1(null, document.getElementById('nom').value)     
+        }
+        })
+
+        var clear = React.createClass({
+        render: function() {
+            return React.DOM.h1(null, '')     
+        }
+        })
+
+// DOM - 2 pour le bouton submit
+    var btn_submit = document.getElementById('btn_submit');
+    btn_submit.addEventListener('click', function (params) {
+
+        ReactDOM.render(React.createElement(helloComponent), document.getElementById('root'))
+    })
+
+    
+    // DOM - 2 pour cacher le root
+    var btn_submit = document.getElementById('hide_cmp');
+    btn_submit.addEventListener('click', function (params) {
+        ReactDOM.render(React.createElement(clear), document.getElementById('root'))
+    })
+    </script>
+</body>
+</html>

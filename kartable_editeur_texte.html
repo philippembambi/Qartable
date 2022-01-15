@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editeur de texte</title>
+
+    <link rel="stylesheet" href="./jquery.mobile-1.4.5/jquery.mobile-1.4.5.css">
+    <link rel="stylesheet" href="./assets/css/jqm-demos.css">
+
+    <link rel="stylesheet" href="./css/font-awesome.css">
+    <link rel="stylesheet" href="./css/theme_classic.css">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+  
+<!--Js Jquery mobile-->
+    <script src="./jquery-2.1.1.min.js"></script>
+    <script src="./jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+</head>
+<body onload="document.getElementById('contenu').style.height = '400px';">
+
+    <div data-role="page" class="jqm-demos ui-responsive-panel" id="page1" data-title="Editeur de texte" data-url="Editeur_texte" data-theme="c">
+
+
+        <div data-role="header" data-theme="c">
+                <a href="./" data-shadow="false" data-iconshadow="false" data-icon="carat-l" data-iconpos="notext" data-rel="back" data-ajax="false">Back</a>
+
+                <div class="ui-grid-b">
+                    <div class="ui-block-a">
+                        <div class="ui-bar ui-bar-c" style="height:90px">
+                            <ul data-role="listview" data-split-icon="grid" data-theme="a" data-split-theme="b" data-inset="true">
+                                <li>
+                                    <a href="#"><h2>Ouvrir</h2></a>
+                                    <a href="#" data-rel="popup" data-position-to="window" data-transition="pop">Cliquer</a>
+                                </li>
+                                <li>
+                                    <a href="#"><h2>Enregistrer</h2></a>
+                                    <a href="#" data-theme="a" data-rel="popup" data-position-to="window" data-transition="pop">Cliquer</a>
+                                </li>
+                               
+                            </ul>
+                        </div>
+                    </div><!--Fin de bloc-->
+
+                    <div class="ui-block-b">
+                        <div class="ui-bar ui-bar-a" style="height:90px">
+                            <div data-role="controlgroup" data-type="horizontal" data-mini="true">
+                                <a href="#" class="ui-shadow ui-btn ui-corner-all ui-btn-icon-left ui-icon-plus ui-btn-b">Gras</a>
+                                <a href="#" class="ui-shadow ui-btn ui-corner-all ui-btn-icon-left ui-icon-plus ui-btn-b">Souligné</a>
+                                <a href="#" class="ui-shadow ui-btn ui-corner-all ui-btn-icon-left ui-icon-plus ui-btn-b">Italique</a>
+                            </div>
+
+                            <div data-role="controlgroup" data-type="horizontal" data-mini="true">
+                                <a href="#" class="ui-shadow ui-btn ui-corner-all ui-btn-icon-left ui-icon-plus ui-btn-b">Paragraphe &nbsp;&nbsp;&nbsp;&nbsp;</a>
+                                <a href="#" class="ui-shadow ui-btn ui-corner-all ui-btn-icon-left ui-icon-plus ui-btn-b">Majuscule &nbsp;&nbsp;&nbsp;&nbsp;</a>
+                            </div>   
+                        </div>
+                    </div> <!--Fin de block-->
+
+                    <div class="ui-block-c">
+                        <div class="ui-bar ui-bar-a" style="height:90px">
+                            <div data-role="controlgroup" data-type="horizontal" data-mini="true">
+                                <a href="#" class="ui-shadow ui-btn ui-corner-all ui-btn-icon-left ui-icon-plus ui-btn-b">Centre</a>
+                                <a href="#" class="ui-shadow ui-btn ui-corner-all ui-btn-icon-left ui-icon-plus ui-btn-b">Gauche</a>
+                                <a href="#" class="ui-shadow ui-btn ui-corner-all ui-btn-icon-left ui-icon-plus ui-btn-b">Droite</a>
+                            </div>
+
+                            <div data-role="controlgroup" data-type="horizontal" data-mini="true">
+                                <a href="#" class="ui-shadow ui-btn ui-corner-all ui-btn-icon-left ui-icon-plus ui-btn-b">Taille de police &nbsp;</a>
+                                <a href="#" class="ui-shadow ui-btn ui-corner-all ui-btn-icon-left ui-icon-plus ui-btn-b">Couleur &nbsp;&nbsp;&nbsp;&nbsp;</a>
+                            </div>
+
+                        </div>
+                    </div> <!--Fin de bloc-->
+                </div><!-- /grid-c -->
+    
+            </div><!-- /header -->
+
+         
+ <div data-role="main" class="ui-content jqm-content jqm-fullwidth"> <!--Debut de main-->
+
+    
+    <form>
+        <div class="ui-field-contain">
+            <label for="select-native-17">Type de fichier</label>
+            <select name="select-native-17" id="select-native-17">
+                <option value="1">Billet de vacances</option>
+                <option value="2">Lettre de convocation</option>
+            </select>
+        </div>
+        
+        <textarea name="contenu" id="contenu" style="min-height: 400px;" style="background-color: white;" placeholder="Zone de saisie ..."></textarea>
+    </form>
+  
+ </div> <!--End main-->
+ </div>   <!--End page-->
+
+</body>
+</html>

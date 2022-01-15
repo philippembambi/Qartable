@@ -1,0 +1,100 @@
+/* Button up */
+.ui-btn,
+html .ui-bar-c .ui-btn,
+html .ui-body-c .ui-btn,
+html body .ui-group-theme-c .ui-btn,
+html head + body .ui-btn.ui-btn-c,
+/* Button visited */
+.ui-btn:visited,
+html .ui-bar-c .ui-btn:visited,
+html .ui-body-c .ui-btn:visited,
+html body .ui-group-theme-c .ui-btn:visited,
+html head + body .ui-btn.ui-btn-c:visited {
+	background: 			#eee /*{c-bup-background-color}*/;
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #fff /*{c-bup-background-start}*/), to( #f1f1f1 /*{c-bup-background-end}*/)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient( #fff /*{c-bup-background-start}*/, #f1f1f1 /*{c-bup-background-end}*/); /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient( #fff /*{c-bup-background-start}*/, #f1f1f1 /*{c-bup-background-end}*/); /* FF3.6 */
+	background-image:     -ms-linear-gradient( #fff /*{c-bup-background-start}*/, #f1f1f1 /*{c-bup-background-end}*/); /* IE10 */
+	background-image:      -o-linear-gradient( #fff /*{c-bup-background-start}*/, #f1f1f1 /*{c-bup-background-end}*/); /* Opera 11.10+ */
+	background-image:         linear-gradient( #fff /*{c-bup-background-start}*/, #f1f1f1 /*{c-bup-background-end}*/);
+	border-color:	 		#ccc /*{c-bup-border}*/;
+	color: 					#222 /*{c-bup-color}*/;
+	text-shadow: 0 /*{c-bup-shadow-x}*/ 1px /*{c-bup-shadow-y}*/ 0 /*{c-bup-shadow-radius}*/ #fff /*{c-bup-shadow-color}*/;
+}
+
+/* Button down */
+.ui-btn:active,
+html .ui-bar-c .ui-btn:active,
+html .ui-body-c .ui-btn:active,
+html body .ui-group-theme-c .ui-btn:active,
+html head + body .ui-btn.ui-btn-c:active {
+	background: 			#d6d6d6 /*{c-bdown-background-color}*/;
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #d0d0d0 /*{c-bdown-background-start}*/), to( #dfdfdf /*{c-bdown-background-end}*/)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient( #d0d0d0 /*{c-bdown-background-start}*/, #dfdfdf /*{c-bdown-background-end}*/); /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient( #d0d0d0 /*{c-bdown-background-start}*/, #dfdfdf /*{c-bdown-background-end}*/); /* FF3.6 */
+	background-image:     -ms-linear-gradient( #d0d0d0 /*{c-bdown-background-start}*/, #dfdfdf /*{c-bdown-background-end}*/); /* IE10 */
+	background-image:      -o-linear-gradient( #d0d0d0 /*{c-bdown-background-start}*/, #dfdfdf /*{c-bdown-background-end}*/); /* Opera 11.10+ */
+	background-image:         linear-gradient( #d0d0d0 /*{c-bdown-background-start}*/, #dfdfdf /*{c-bdown-background-end}*/);
+	border-color:	 		#bbb /*{c-bdown-border}*/;
+	color: 					#222 /*{c-bdown-color}*/;
+	text-shadow: 0 /*{c-bdown-shadow-x}*/ 1px /*{c-bdown-shadow-y}*/ 0 /*{c-bdown-shadow-radius}*/ #fff /*{c-bdown-shadow-color}*/;
+}
+/* Active button */
+.ui-btn.ui-btn-active,
+html .ui-bar-c .ui-btn.ui-btn-active,
+html .ui-body-c .ui-btn.ui-btn-active,
+html body .ui-group-theme-c .ui-btn.ui-btn-active,
+html head + body .ui-btn.ui-btn-c.ui-btn-active,
+/* Active checkbox icon */
+.ui-checkbox-on:after,
+html .ui-bar-c .ui-checkbox-on:after,
+html .ui-body-c .ui-checkbox-on:after,
+html body .ui-group-theme-c .ui-checkbox-on:after,
+.ui-btn.ui-checkbox-on.ui-btn-c:after,
+/* Active flipswitch background */
+.ui-flipswitch-active,
+html .ui-bar-c .ui-flipswitch-active,
+html .ui-body-c .ui-flipswitch-active,
+html body .ui-group-theme-c .ui-flipswitch-active,
+html body .ui-flipswitch.ui-bar-c.ui-flipswitch-active,
+/* Active slider track */
+.ui-slider-track .ui-btn-active,
+html .ui-bar-c .ui-slider-track .ui-btn-active,
+html .ui-body-c .ui-slider-track .ui-btn-active,
+html body .ui-group-theme-c .ui-slider-track .ui-btn-active,
+html body div.ui-slider-track.ui-body-c .ui-btn-active {
+	background-color: 		#5393c5 /*{c-active-background-color}*/;
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #5393c5 /*{c-active-background-start}*/), to( #6facd5 /*{c-active-background-end}*/)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient( #5393c5 /*{c-active-background-start}*/, #6facd5 /*{c-active-background-end}*/); /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient( #5393c5 /*{c-active-background-start}*/, #6facd5 /*{c-active-background-end}*/); /* FF3.6 */
+	background-image:     -ms-linear-gradient( #5393c5 /*{c-active-background-start}*/, #6facd5 /*{c-active-background-end}*/); /* IE10 */
+	background-image:      -o-linear-gradient( #5393c5 /*{c-active-background-start}*/, #6facd5 /*{c-active-background-end}*/); /* Opera 11.10+ */
+	background-image:         linear-gradient( #5393c5 /*{c-active-background-start}*/, #6facd5 /*{c-active-background-end}*/);
+	border-color:	 		#2373a5 /*{c-active-border}*/;
+	color: 					#fff /*{c-active-color}*/;
+	text-shadow: 0 /*{c-active-shadow-x}*/ 1px /*{c-active-shadow-y}*/ 0 /*{c-active-shadow-radius}*/ #3373a5 /*{c-active-shadow-color}*/;
+}
+
+.ui-radio-on:after,
+html .ui-bar-c .ui-radio-on:after,
+html .ui-body-c .ui-radio-on:after,
+html body .ui-group-theme-c .ui-radio-on:after,
+.ui-btn.ui-radio-on.ui-btn-c:after {
+	border-color:			#5393c5 /*{c-active-background-color}*/;
+}
+.ui-btn:focus,
+html .ui-bar-c .ui-btn:focus,
+html .ui-body-c .ui-btn:focus,
+html body .ui-group-theme-c .ui-btn:focus,
+html head + body .ui-btn.ui-btn-c:focus,
+/* Focus buttons and text inputs with div wrap */
+.ui-page-theme-c .ui-focus,
+html .ui-bar-c .ui-focus,
+html .ui-body-c .ui-focus,
+html body .ui-group-theme-c .ui-focus,
+html head + body .ui-btn-c.ui-focus,
+html head + body .ui-body-c.ui-focus {
+	-webkit-box-shadow: 0 0 12px 	#387bbe /*{c-active-background-color}*/;
+	-moz-box-shadow: 0 0 12px 		#387bbe /*{c-active-background-color}*/;
+	box-shadow: 0 0 12px 			#387bbe /*{c-active-background-color}*/;
+}
